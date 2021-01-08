@@ -83,9 +83,112 @@ class MainPage extends StatelessWidget {
                                     BorderSide(color: Color(0xFFFF4891))),
                             labelText: 'Email',
                             labelStyle: TextStyle(color: Color(0xFFFF4891))),
+                      ),
+                      TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            icon: Icon(
+                              Icons.vpn_key,
+                              color: Color(0xFFFF4891),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Color(0xFFFF4891))),
+                            labelText: 'Password',
+                            labelStyle: TextStyle(color: Color(0xFFFF4891))),
                       )
                     ],
                   ),
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Container(
+                    margin: EdgeInsets.fromLTRB(0, 0, 20, 20),
+                    child: Text(
+                      'FORGOT PASSWORD?',
+                      style: TextStyle(color: Color(0xFFFF4891), fontSize: 11),
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(20, 0, 20, 30),
+                  child: Row(
+                    children: <Widget>[
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        height: 40,
+                        child: Container(
+                          child: Material(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.transparent,
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(20),
+                              splashColor: Colors.amber,
+                              onTap: () {},
+                              child: Center(
+                                child: Text(
+                                  'SIGN IN',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                              ),
+                            ),
+                          ),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              gradient: LinearGradient(
+                                  colors: [
+                                    Color(0xFFB226B2),
+                                    Color(0xFFFF4891)
+                                  ],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter)),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(20, 0, 10, 0),
+                        child: FloatingActionButton(
+                          onPressed: () {},
+                          mini: true,
+                          elevation: 0,
+                          child: Image(
+                            image: AssetImage('assets/facebook.png'),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(10, 0, 20, 0),
+                        child: FloatingActionButton(
+                          onPressed: () {},
+                          mini: true,
+                          elevation: 0,
+                          child: Image(
+                            image: AssetImage('assets/twitter.png'),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'DONT HAVE ACCOUNT YET? ',
+                      style: TextStyle(
+                          fontSize: 11,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    Text(
+                      ' SIGN UP NOW!',
+                      style: TextStyle(
+                          fontSize: 11,
+                          color: Color(0xFFFF4891),
+                          fontWeight: FontWeight.w700),
+                    )
+                  ],
                 )
               ],
             ),
